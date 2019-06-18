@@ -374,16 +374,16 @@ The gene set tsfm_input_geneset.txt is passed to the script TriTrypAlignment.R t
 *TriTrypAlignment.R*
 
 Alignment Steps:\
-1. tsfm_input_geneset.txt are read and their functional class are added at the end of their geneID\
+1. Genes from tsfm_input_geneset.txt are read and functional classes are added at the end of the geneID\
 2. Variable arms are removed based on reported secondary structure from genefinders\
-3. gene intron is removed based in the secondary sctructure\
+3. Gene introns are removed based in the secondary sctructure\
 4. the result is merged with the Human tRNA genes (the headers for Homo genes are also updated) and the result is saved in file coveainput.fasta.\
 5. coveainput.fasta is aligned to the Eukaryote model using covea\
 6. the result (Aligned_TriTryp_Homo.covea) is edited based on the fallowing criteria in order:\
    a)  sites that have more than 98% gap are removed\
    b)  sequences with more than 3 gaps are removed\
-   c)  sequences with two or more gaps next to eachotehr are removed\
-7. the alignment result is saved as fasta file Aligned_TriTryp_Homo.fasta, with secondary structure saved as Aligned_TriTryp_Homo_structfile.txt\
+   c)  sequences with two or more gaps next to eachother are removed\
+7. the alignment result is saved as fasta file in Aligned_TriTryp_Homo.fasta, with secondary structure saved as Aligned_TriTryp_Homo_structfile.txt\
 \
 \
 *SplitAlignedGenes.R*
@@ -679,5 +679,5 @@ library(gdata)
 \
 \
 \
-fasta gene files will be splitted based on tRNA functional class by running script splitFuncClass.sh.\
+Fasta gene files will be splitted based on tRNA functional class by running script splitFuncClass.sh.\
 
